@@ -1,49 +1,25 @@
-<ion-content class="ion-padding home-container">
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>eCandle</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-card class="custom-card">
-    <ion-card-header>
-      <ion-card-title>¿Qué tipo de cumpleaños se celebra?</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-input placeholder="Ej. Cumpleaños infantil, adulto, sorpresa..."></ion-input>
-    </ion-card-content>
-  </ion-card>
+<ion-content class="ion-padding">
+  <h2>¿Cuántos años cumple?</h2>
 
-  <ion-card class="custom-card">
-    <ion-card-header>
-      <ion-card-title>Edad del festejado</ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="age-selector">
-      <ion-button fill="outline" (click)="decrementAge()">-</ion-button>
-      <div class="age-number">{{ age }}</div>
-      <ion-button fill="outline" (click)="incrementAge()">+</ion-button>
-    </ion-card-content>
-  </ion-card>
+  <div class="age-selector">
+    <ion-button (click)="decreaseAge()" fill="outline" shape="round">
+      <ion-icon name="remove-outline"></ion-icon>
+    </ion-button>
 
-  <ion-card class="custom-card">
-    <ion-card-header>
-      <ion-card-title>Idioma del festejo</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-segment [(ngModel)]="language">
-        <ion-segment-button value="es">
-          <ion-label>Español</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="en">
-          <ion-label>Inglés</ion-label>
-        </ion-segment-button>
-      </ion-segment>
-    </ion-card-content>
-  </ion-card>
+    <ion-select [(ngModel)]="selectedAge" interface="popover">
+      <ion-select-option *ngFor="let age of ages" [value]="age">
+        {{ age }} años
+      </ion-select-option>
+    </ion-select>
 
-  <div class="next-button-container">
-    <ion-button expand="block" (click)="goToStep2()">Siguiente</ion-button>
+    <ion-button (click)="increaseAge()" fill="outline" shape="round">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-button>
   </div>
-
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="goToHistory()">
-      <ion-icon name="book-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
 </ion-content>
