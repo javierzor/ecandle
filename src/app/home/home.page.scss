@@ -1,0 +1,28 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .custom-card {
+    --background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .age-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .age-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 1rem;
+  }
+  
+  .next-button-container {
+    padding: 0 2rem;
+  }

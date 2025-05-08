@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
+
 
 @Component({
   selector: 'app-home',
