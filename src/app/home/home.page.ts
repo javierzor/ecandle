@@ -14,7 +14,14 @@ import { Platform } from '@ionic/angular';
 export class HomePage {
   selectedAge: number = 1;
   ages: number[] = [];
-
+  selectedLanguage: string = 'es'; // Por defecto español
+  languages = [
+    { code: 'es', label: 'Español' },
+    { code: 'en', label: 'Inglés' },
+    // Opcionalmente deja espacio para más
+    // { code: 'it', label: 'Italiano' },
+    // { code: 'pt', label: 'Português' },
+  ];
   constructor() {
     this.populateAges();
   }
@@ -36,5 +43,11 @@ export class HomePage {
       this.selectedAge = this.ages[currentIndex - 1];
     }
   }
+
+  selectLanguage(code: string) {
+    this.selectedLanguage = code;
+    // Aquí podrías guardar en Storage si quieres persistir
+  }
+
 
 }

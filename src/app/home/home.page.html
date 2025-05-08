@@ -22,4 +22,23 @@
       <ion-icon name="add-outline"></ion-icon>
     </ion-button>
   </div>
+
+
+  <h2>¿En qué idioma será la celebración?</h2>
+
+  <div class="language-buttons">
+    <ion-button
+      *ngFor="let lang of languages"
+      [color]="selectedLanguage === lang.code ? 'primary' : 'medium'"
+      (click)="selectLanguage(lang.code)"
+      expand="block"
+      shape="round"
+      class="language-button"
+    >
+      {{ lang.label }}
+    </ion-button>
+  </div>
+  
+
+
 </ion-content>
