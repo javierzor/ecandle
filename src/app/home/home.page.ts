@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
+import { StorageService } from '../services/storage.service';
 
 
 @Component({
@@ -10,6 +11,17 @@ import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/n
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private storage: StorageService)
+   {}
+
+
+  async guardarEdad() {
+    await this.storage.set('edad', 5);
+  }
+  
+  async cargarEdad() {
+    const edad = await this.storage.get<number>('edad');
+    console.log('Edad cargada:', edad);
+  }
 
 }
