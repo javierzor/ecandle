@@ -1,25 +1,20 @@
-<ion-content [style.background]="backgroundColor" class="step3-content">
-  <!-- ANIMACIÓN PRINCIPAL -->
-  <div class="animation-container">
-    <ng-container [ngSwitch]="selectedAnimation">
-      <app-animation1 *ngSwitchCase="'1'"></app-animation1>
-      <app-animation2 *ngSwitchCase="'2'"></app-animation2>
-      <app-animation3 *ngSwitchCase="'3'"></app-animation3>
-      <app-animation4 *ngSwitchCase="'4'"></app-animation4>
-      <app-animation5 *ngSwitchCase="'5'"></app-animation5>
-      <app-animation6 *ngSwitchCase="'6'"></app-animation6>
-    </ng-container>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Paso 3: Elige una Animación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="animation-grid">
+    <div
+      class="animation-card"
+      *ngFor="let anim of animations"
+      (click)="selectAnimation(anim.id)"
+      [innerHTML]="anim.preview"
+    ></div>
   </div>
 
-  <!-- TEXTO DINÁMICO CON FUENTE ESPECIAL -->
-  <div class="birthday-text" [ngStyle]="{ 'font-family': selectedFont, 'color': primaryColor }">
-    <h1>¡{{ age }} años!</h1>
-    <p>{{ getBirthdayMessage() }}</p>
-  </div>
-
-  <!-- BOTONES -->
-  <ion-footer class="step3-footer">
-    <ion-button expand="full" fill="outline" (click)="goBack()">Atrás</ion-button>
-    <ion-button expand="full" color="primary" (click)="goNext()">Siguiente</ion-button>
-  </ion-footer>
+  <ion-button expand="block" color="primary" (click)="selectAnimation()">
+    Empezar Animación
+  </ion-button>
 </ion-content>

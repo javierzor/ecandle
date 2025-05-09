@@ -1,41 +1,26 @@
-.step3-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .animation-card {
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 8px;
     text-align: center;
-    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
-  .animation-container {
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .animation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
   
-  .birthday-text h1 {
-    font-size: 4rem;
-    margin: 0;
-    animation: bounce 1.5s infinite;
-  }
-  
-  .birthday-text p {
-    font-size: 1.8rem;
-    margin: 1rem 0;
-    animation: sparkle 2s infinite;
-  }
-  
-  .step3-footer {
-    padding: 1rem;
-  }
-  
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  
-  @keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
+  ion-button {
+    margin-top: 30px;
   }
   

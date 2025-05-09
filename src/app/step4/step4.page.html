@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Tu animación final 🎉</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullscreen>
+  <div class="animation-container" [innerHTML]="finalAnimation"></div>
+
+  <ion-button expand="block" color="medium" (click)="goBack()">
+    🔁 Cambiar animación
+  </ion-button>
+</ion-content>
