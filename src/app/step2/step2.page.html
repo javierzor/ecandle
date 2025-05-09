@@ -1,0 +1,45 @@
+<ion-footer>
+  <div class="footer-buttons">
+    <ion-button expand="block" fill="outline" (click)="goBack()">Atrás</ion-button>
+    <ion-button expand="block" shape="round" (click)="goToStep3()">Siguiente</ion-button>
+  </div>
+</ion-footer>
+
+
+<ion-content>
+
+  <div class="section">
+    <h3>Color de fondo</h3>
+    <div class="color-options">
+      <div *ngFor="let color of popularColors" [style.background]="color"
+           class="color-box"
+           [class.selected]="selectedBackground === color"
+           (click)="selectColor('background', color)">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Color primario</h3>
+    <div class="color-options">
+      <div *ngFor="let color of popularColors" [style.background]="color"
+           class="color-box"
+           [class.selected]="selectedPrimary === color"
+           (click)="selectColor('primary', color)">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Color secundario</h3>
+    <div class="color-options">
+      <div *ngFor="let color of popularColors" [style.background]="color"
+           class="color-box"
+           [class.selected]="selectedSecondary === color"
+           (click)="selectColor('secondary', color)">
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

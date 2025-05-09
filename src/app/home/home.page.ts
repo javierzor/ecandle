@@ -22,9 +22,11 @@ export class HomePage {
     // { code: 'it', label: 'Italiano' },
     // { code: 'pt', label: 'Português' },
   ];
-  constructor() {
+  constructor(private router: Router) {
+    
     this.populateAges();
   }
+
 
   populateAges() {
     this.ages = Array.from({ length: 100 }, (_, i) => i + 1);
@@ -47,6 +49,13 @@ export class HomePage {
   selectLanguage(code: string) {
     this.selectedLanguage = code;
     // Aquí podrías guardar en Storage si quieres persistir
+  }
+
+
+  goToStep2() {
+    localStorage.setItem('age', this.selectedAge.toString());
+    localStorage.setItem('language', this.selectedLanguage);
+    this.router.navigate(['/step2']);
   }
 
 

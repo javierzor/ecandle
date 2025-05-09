@@ -1,0 +1,41 @@
+.step3-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .animation-container {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .birthday-text h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: bounce 1.5s infinite;
+  }
+  
+  .birthday-text p {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    animation: sparkle 2s infinite;
+  }
+  
+  .step3-footer {
+    padding: 1rem;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  
