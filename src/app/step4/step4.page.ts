@@ -17,7 +17,7 @@ export class Step4Page {
   finalAnimation = '';
 
   private animation: AnimationItem;
-
+  selected_animation: string = '1';
   constructor(
     private navCtrl: NavController,
     private animationService: AnimationService,

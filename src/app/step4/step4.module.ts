@@ -8,6 +8,7 @@ import { Step4PageRoutingModule } from './step4-routing.module';
 
 import { Step4Page } from './step4.page';
 import { AnimacionunocompComponent } from "../components/animacionunocomp/animacionunocomp.component";
+import { AnimaciondoscompComponent } from '../components/animaciondoscomp/animaciondoscomp.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AnimacionunocompComponent } from "../components/animacionunocomp/animac
     FormsModule,
     IonicModule,
     Step4PageRoutingModule,
-    AnimacionunocompComponent
+    AnimacionunocompComponent,
+    AnimaciondoscompComponent
 ],
   declarations: [Step4Page]
 })
