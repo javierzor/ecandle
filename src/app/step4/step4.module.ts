@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { Step4PageRoutingModule } from './step4-routing.module';
 
 import { Step4Page } from './step4.page';
+import { AnimacionunocompComponent } from "../components/animacionunocomp/animacionunocomp.component";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Step4PageRoutingModule
-  ],
+    Step4PageRoutingModule,
+    AnimacionunocompComponent
+],
   declarations: [Step4Page]
 })
 export class Step4PageModule {}

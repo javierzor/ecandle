@@ -12,7 +12,7 @@ import { Platform } from '@ionic/angular';
   standalone: false,
 })
 export class HomePage {
-  selectedAge: number = 1;
+  selectedAge: number = 0;
   ages: number[] = [];
   selectedLanguage: string = 'es'; // Por defecto español
   languages = [
@@ -29,7 +29,7 @@ export class HomePage {
 
 
   populateAges() {
-    this.ages = Array.from({ length: 100 }, (_, i) => i + 1);
+    this.ages = Array.from({ length: 100 }, (_, i) => i + 0);
   }
 
   increaseAge() {

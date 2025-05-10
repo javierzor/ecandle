@@ -1,7 +1,22 @@
 <ion-footer>
   <div class="footer-buttons">
-    <ion-button expand="block" fill="outline" (click)="goBack()">Atrás</ion-button>
+    <ion-grid>
+      <ion-row >
+        <div class="ion-text-center">
+          Ocultar nombre
+        </div>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" fill="outline" (click)="goBack()">Atrás</ion-button>
+
+        </ion-col>
+        <ion-col size="6">
     <ion-button expand="block" shape="round" (click)="goToStep3()">Siguiente</ion-button>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-footer>
 
